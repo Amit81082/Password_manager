@@ -239,6 +239,20 @@ nav .logo {
   background-color: #444; /* Darker background on hover */
 }
 
+.copy-btn {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.copy-btn:hover {
+  color: #66a6ff;
+}
+
 footer {
   background-color: #333;
   color: #fff;

@@ -17,10 +17,43 @@ function populateTable() {
     const deleteCell = document.createElement('td');
     const deleteButton = document.createElement('button');
 
-    usernameCell.textContent = username;
-    passwordCell.textContent = password;
-    websiteCell.textContent = website;
+    // Website cell with copy icon
+    websiteCell.innerHTML = `
+      <span>${website}</span>
+      <button class="copy-btn" aria-label="Copy website">
+        📋
+      </button>
+    `;
+    websiteCell.querySelector('.copy-btn').addEventListener('click', () => {
+      navigator.clipboard.writeText(website);
+      alert('Website copied to clipboard!');
+    });
 
+    // Username cell with copy icon
+    usernameCell.innerHTML = `
+      <span>${username}</span>
+      <button class="copy-btn" aria-label="Copy username">
+        📋
+      </button>
+    `;
+    usernameCell.querySelector('.copy-btn').addEventListener('click', () => {
+      navigator.clipboard.writeText(username);
+      alert('Username copied to clipboard!');
+    });
+
+    // Password cell with hidden text and copy icon
+    passwordCell.innerHTML = `
+      <span>••••••••</span>
+      <button class="copy-btn" aria-label="Copy password">
+        📋
+      </button>
+    `;
+    passwordCell.querySelector('.copy-btn').addEventListener('click', () => {
+      navigator.clipboard.writeText(password);
+      alert('Password copied to clipboard!');
+    });
+
+    // Delete button
     deleteButton.textContent = 'Delete';
     deleteButton.classList.add('delete-btn');
     deleteButton.addEventListener('click', () => {
@@ -30,9 +63,9 @@ function populateTable() {
     });
 
     deleteCell.appendChild(deleteButton);
+    row.appendChild(websiteCell);
     row.appendChild(usernameCell);
     row.appendChild(passwordCell);
-    row.appendChild(websiteCell);
     row.appendChild(deleteCell);
     table.appendChild(row);
   });
