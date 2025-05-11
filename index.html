@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PassX - A secure and user-friendly password manager to keep your passwords safe and organized."
+    />
+    <meta
+      name="keywords"
+      content="Password Manager, Secure Passwords, PassX, Password Storage, Online Security"
+    />
+    <meta name="author" content="PassX Team" />
+    <title>Password Manager | PassX</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <h1>PassX</h1>
+      </div>
+      <div class="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#" aria-label="Navigate to Home">Home</a></li>
+        <li><a href="#" aria-label="Learn more About us">About</a></li>
+        <li><a href="#" aria-label="Explore our Services">Services</a></li>
+        <li><a href="#" aria-label="Contact us">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h1>Password Manager</h1>
+      <p>
+        Welcome to PassX, your trusted Password Manager. 🔒 Keep your passwords
+        safe and secure with ease!
+      </p>
+
+      <section class="passwords-section">
+        <h2>Your Passwords</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Website</th>
+              <th>Username</th>
+              <th>Password</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>example.com</td>
+              <td>user123</td>
+              <td>password123</td>
+              <td>
+                <button
+                  class="delete-btn"
+                  aria-label="Delete password for example.com"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+            <!-- Additional rows can be added dynamically -->
+          </tbody>
+        </table>
+      </section>
+
+      <section class="add-password-section">
+        <h2>Add a Password</h2>
+        <form id="add-password-form" aria-label="Add a new password">
+          <div class="form-group">
+            <label for="website">Website:</label>
+            <input
+              type="text"
+              id="website"
+              name="website"
+              required
+              aria-required="true"
+            />
+          </div>
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              aria-required="true"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              aria-required="true"
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="submit-btn"
+            aria-label="Submit new password"
+          >
+            Submit
+          </button>
+        </form>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2023 PassX. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

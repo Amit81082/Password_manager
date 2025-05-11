@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure the body and html take up the full height of the viewport */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  color: #333;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+.container {
+  flex: 1;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.container h2 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+.add-password-section h2,
+.passwords-section h2 {
+  margin-bottom: 10px;
+}
+
+.passwords-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  table-layout: fixed;
+}
+
+.passwords-section th,
+.passwords-section td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.passwords-section th {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+}
+
+.passwords-section tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.passwords-section tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.passwords-section tr:hover {
+  background-color: #f1f1f1;
+}
+
+.passwords-section .delete-btn {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.passwords-section .delete-btn:hover {
+  background-color: #e60000;
+}
+
+.add-password-section {
+  width: 100%;
+  margin-top: 30px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-password-section h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.add-password-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-password-section .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.add-password-section label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.add-password-section input,
+.add-password-section select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.add-password-section input:focus,
+.add-password-section select:focus {
+  border-color: #66a6ff; /* Highlight border on focus */
+  outline: none;
+}
+
+.add-password-section .submit-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-password-section .submit-btn:hover {
+  background-color: #444; /* Darker background on hover */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .container h1 {
+    font-size: 1.8rem;
+  }
+
+  .container h2 {
+    font-size: 1.3rem;
+  }
+
+  .passwords-section table {
+    font-size: 0.9rem;
+  }
+
+  .add-password-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .add-password-section input,
+  .add-password-section select {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .add-password-section .submit-btn {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
